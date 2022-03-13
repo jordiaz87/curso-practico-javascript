@@ -1,10 +1,31 @@
 const lista1 = [
-    100,
-    200,
-    500,
-    
-    4000000000
+    5,
+    3,
+    6,
+    5,
+    4,
+    5,
+    2,
+    8,
+    6,
+    5,
+    4,
+    8,
+    3,
+    4,
+    5,
+    4,
+    8,
+    2,
+    5,
+    4
+   
+   
 ];
+
+lista1.sort(function (a, b){
+    return a - b
+});
 
 const mitadLista1 = parseInt(lista1.length / 2);
 

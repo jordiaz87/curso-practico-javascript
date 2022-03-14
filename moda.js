@@ -29,7 +29,11 @@ lista1.map(
     
 );
 
-
+const lista1Array = Object.entries(lista1Count).sort(
+    function (valorAcumulado, nuevoValor){
+        valorAcumulado - nuevoValor
+    }
+);
 
 
 

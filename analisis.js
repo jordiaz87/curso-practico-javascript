@@ -1,7 +1,7 @@
 //  Se obtienen el valor entero de los salarios del array 
-//  colombia en un nuevo array llamado salariosVe @@@@@@@@@@@@@@@@
+//  venezuela en un nuevo array llamado salariosVe @@@@@@@@@@@@@@@@
 
-const salariosVe = colombia.map(
+const salariosVe = venezuela.map(
     function (persona){
         return persona.salary;
     }
@@ -66,6 +66,26 @@ function medianaSalarios(lista) {
     }
 }
 
-console.log(
-    medianaSalarios(salariosVeSorted)
+
+
+
+const medianaGeneralVe = medianaSalarios(salariosVeSorted);
+
+// Calculando mediana del top 10% de salarios
+
+
+
+const spliceStart = (salariosVeSorted.length * 90) / 100;
+const spliceCount = salariosVeSorted.length - spliceStart;
+
+const salariosVeTop10 = salariosVeSorted.splice(
+    spliceStart,
+    spliceCount,
 );
+
+const medianaTop10Ve = medianaSalarios(salariosVeTop10);
+
+console.log({
+    medianaGeneralVe,
+    medianaTop10Ve,
+});
